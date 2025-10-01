@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://xmlns.jcp.org/jsf/html"
+	  xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<ui:include src="header.xhtml" />
+<h:head>
+  <title>Home</title>
+  <h:outputStylesheet library="css" name="/ERP/src/main/webapp/stylesheets.css"/>
+  
+
+  
+</h:head>
+
+<h:body>
+
+<div id="header">
+   	<!-- Applications - module name - settings , search and help
+   	Company background image and company name -->
+   	<ul class="hNavbarUL">
+   	  <li>
+	  <button class="openbtn" onclick="openNav()">&#9776; </button>
+	  </li>
+	  <li><a href="#home">APPS</a></li>
+	  <li><a href="#news">Financial and Operations</a></li>
+	  <li class="settings"><a href="#about">Settings</a></li>
+	  <li class="settings"><a href="#contact">Search</a></li>
+	  <li class="settings"><a href="#contact">013</a></li>
+	</ul>
+	
+</div>
+
+
+<div id="content">
+<!--  3 parts (30 : 70)
+		modules bar
+    	30 calender
+    	70 module content navigation -->
+    	
+    <!-- Side bar -->
+   	<div id="mySidebar" class="sidebar">
+	  <a href="#">ACC Receivable</a>
+	  <a href="AccountsPayable.xhtml">ACC Payable</a>
+	  <a href="ProcurementAndResourcing.xhtml">Procurement and Resourcing</a>
+	  <a href="#">Clients</a>
+	  <a href="#">Contact</a>
+	</div>
+	
+test
+    	
+    
+    
+</div>
+
+<div id="footer">
+  <ui:insert name="footer">
+    	leave it empty now
+  </ui:insert>
+</div>
+
+
+</h:body>
+
+</html>

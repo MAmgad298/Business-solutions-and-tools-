@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+      <ui:include src="header.xhtml" />
+<h:head>
+  <title>All Vendors Finance and Operations</title>
+</h:head>
+
+<h:body>
+
+<div id="header">
+
+	<ul class="hNavbarUL">
+   	  <li>
+	  <button class="openbtn" onclick="openNav()">&#9776; </button>
+	  </li>
+	  <li>
+	  <a href="HomePage.xhtml"><b style="font-size: 1.2em;">Financial and Operations</b></a>
+	  </li>
+	  <li><a href="#about">Procurement and sourcing</a></li>
+	  <li style="color:white; text-align: center; padding: 14px 16px;">&gt;</li>
+	  <li><a href="#about">Vendors</a></li>
+	  <li style="color:white; text-align: center; padding: 14px 16px;">&gt;</li>
+	  <li><a href="#about">All Vendors</a></li>
+	  <li class="settings"><a href="#about">Settings</a></li>
+	  <li class="settings"><a href="#contact">Search</a></li>
+	  <li class="settings"><a href="#contact">013</a></li>
+	</ul>
+	
+	            <!-- Side bar -->
+   	<div id="mySidebar" class="sidebar">
+	  <a href="#">ACC Receivable</a>
+	  <a href="AccountsPayable.xhtml">ACC Payable</a>
+	  <a href="ProcurementAndResourcing.xhtml">Procurement and Resourcing</a>
+	  <a href="#">Clients</a>
+	  <a href="#">Contact</a>
+	</div>
+	
+	
+            
+
+</div>
+
+
+<div id="content">
+
+<!-- User commands and Tools -->
+	 <div class="header">
+                <div class="header-left">
+                    <p:button icon="pi pi-bars" styleClass="ui-button-flat" />
+                    <div class="nav-tabs">
+                        <span class="nav-tab">Procurement and Resourcing</span>
+                        <i class="pi pi-angle-right" style="font-size: 0.8em; color: #999; margin: 0 5px;"></i>
+                        <span class="nav-tab active">All vendors</span>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <p:button icon="pi pi-search" styleClass="ui-button-flat" />
+                    <p:button icon="pi pi-question-circle" styleClass="ui-button-flat" />
+                    <p:button icon="pi pi-cog" styleClass="ui-button-flat" />
+                    <p:button icon="pi pi-user" styleClass="ui-button-flat" label="USMF" />
+                    <p:button icon="pi pi-bell" styleClass="ui-button-flat" />
+                </div>
+            </div>
+
+            <div class="header" style="border-top: none; padding: 5px 20px; box-shadow: none;">
+                <div class="header-left">
+                    <div class="header-title" style="font-size: 1.2em;">All vendors</div>
+                    <p:selectOneMenu value="Standard view">
+                        <f:selectItem itemLabel="Standard view" itemValue="Standard view" />
+                    </p:selectOneMenu>
+                    <p:button icon="pi pi-plus" styleClass="ui-button-flat" />
+                </div>
+                <div class="header-right">
+                    <commandButton value="New" icon="pi pi-plus" styleClass="ui-button-primary" />
+                    <commandButton value="Delete" icon="pi pi-trash" />
+                    <commandButton value="Vendor" />
+                    <commandButton value="Procurement" />
+                    <commandButton value="Invoice" />
+                    <p:commandButton value="General" />
+                    <p:commandButton value="Options" icon="pi pi-angle-down" />
+                </div>
+            </div>
+
+	
+	<!-- Form -->
+                        
+       <ui:include src="NewVendorFormPS.html" />
+
+
+            
+<div id="footer">
+
+</div>
+</div>
+
+</h:body>
+
+</html>

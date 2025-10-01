@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<ui:include src="header.xhtml" />
+<h:head>
+  <title>Accounts Payable</title>
+
+</h:head>
+
+<h:body>
+
+<div id="header">
+
+	<ul class="hNavbarUL">
+   	  <li>
+	  <button class="openbtn" onclick="openNav()">&#9776; </button>
+	  </li>
+	  <li><a href="#home">APPS</a></li>
+	  <li><a href="HomePage.xhtml">Financial and Operations</a></li>
+	  <li class="settings"><a href="#about">Settings</a></li>
+	  <li class="settings"><a href="#contact">Search</a></li>
+	  <li class="settings"><a href="#contact">013</a></li>
+	</ul>
+    
+</div>
+
+
+<div id="content">
+
+ <!-- Side bar -->
+   	<div id="mySidebar" class="sidebar">
+	  <a href="#">ACC Receivable</a>
+	  <a href="AccountsPayable.xhtml">ACC Payable</a>
+	  <a href="ProcurementAndResourcing.xhtml">Procurement and Resourcing</a>
+	  <a href="#">Clients</a>
+	  <a href="#">Contact</a>
+	</div>
+	
+	<div>
+	This is header has 2 parts : <br/>
+	1-tools used by authorized users<br/>
+	2-Module name in huge font<br/>
+	</div>
+	<br/>
+	<div>
+	this is content has 3 parts<br/>
+	1-Form to be filled by the authorized users<br/>
+	2-report of the form<br/>
+	3-form for additional data<br/>
+	
+	<!-- purchase order Creating vendor form -->
+	<!-- id, name, address, Payment method, Group -->
+	<h:form>
+	
+	<table style="width:100%">
+	
+	<tr>
+	<td>Vendor no. :</td>
+	<td><h:inputText id="vendorID" value="#{vendor.id}"/></td>
+	<td>Document Date :</td>
+	<td><h:inputText id="DocDate" /></td>
+	</tr>
+	
+	<tr>
+	<td>Vendor Name: </td>
+	<td><h:inputText id="vendorName" value="#{vendor.name}"/></td>
+	</tr>
+	
+	<tr>
+	<td>Address: </td>
+	<td><h:inputText id="vendorAddress" value="#{vendor.address}"/></td>
+	</tr>
+	
+	<tr>
+	<td>Pay Method: </td>
+	<td><h:inputText id="PMethod" value="#{vendor.payMethod}"/></td>
+	</tr> 
+	
+	<tr>
+	<td>Contact Number: </td>
+	<td><h:inputText id="Contact" value="#{vendor.contactNum}"/></td>
+	</tr>
+	
+	<tr>
+	<td>Group: </td>
+	<td><h:inputText id="group" value="#{vendor.group}"/></td>
+	</tr>
+	
+	</table>
+	<h:commandButton value="Submit"/>
+	
+	</h:form>
+	<button onclick="printVendor()">Show</button>
+	<br/>
+	
+	<table>
+	
+	<tr>
+	<td id="printVendName"></td>
+	<td id="printVendPayMethod"></td>
+	<td></td>
+	</tr>
+	
+	</table>
+	
+	
+	</div>
+  
+</div>
+
+<div id="footer">
+  
+</div>
+
+</h:body>
+
+</html>

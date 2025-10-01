@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+      
+      <ui:include src="header.xhtml" />
+      <h:head></h:head>
+	
+	<!-- Form -->
+	
+	<h:body>
+	
+	<div class="content">
+                <p:panel header="New Record" styleClass="card" toggleable="true" toggleSpeed="200" collapsed="false">
+                    <!--  <f:facet name="actions">
+                         <p:toggleButton onIcon="pi pi-check" offIcon="pi pi-times" onLabel="Active" offLabel="Not Active" value="true" />
+                    </f:facet>-->
+                    <h:form>
+                        <p:messages id="msgs" showDetail="true" closable="true" />
+                        <div class="card-header">
+                            <span>General</span>
+                        </div>
+                        <div class="form-grid">
+                            <div class="form-field">
+                                <label>Change party association</label>
+                                <p:inputText />
+                            </div>
+                        </div>
+
+                        <div class="card-header" style="margin-top: 20px;">
+                            <span>Identification</span>
+                        </div>
+                        <div class="form-grid">
+                            <div class="form-field">
+                                <label>Vendor account</label>
+                                <h:inputText id="VA" value="" />
+                            </div>
+                            <div class="form-field">
+                                <label>Name</label>
+                                <h:inputText id="VN" value="" />
+                            </div>
+                            <div class="form-field">
+                                <label>Number of employees</label>
+                                <input type="number" id="NOfEmp" value="" min="0" step="1" />
+                            </div>
+
+                            <div class="form-field">
+                                <label>Type</label>
+                                <h:selectOneMenu value="Organization">
+                                    <f:selectItem itemLabel="Organization" itemValue="Organization" />
+                                </h:selectOneMenu>
+                            </div>
+                            <div class="form-field">
+                                <label>Search name</label>
+                                <h:inputText id="SearchName" value="Vendor 105" />
+                            </div>
+                            <div class="form-field">
+                                <label>ABC code</label>
+                                <h:selectOneMenu value="None">
+                                    <f:selectItem itemLabel="None" itemValue="None" />
+                                </h:selectOneMenu>
+                            </div>
+
+                             <div class="form-field">
+                                <label>Payment priority</label>
+                                <h:selectOneMenu>
+                                    <f:selectItem itemLabel="1" itemValue="1" />
+                                </h:selectOneMenu>
+                            </div>
+                             <div class="form-field">
+                                <label>Group</label>
+                                <h:selectOneMenu>
+                                    <f:selectItem itemLabel="(All)" itemValue="(All)" />
+                                </h:selectOneMenu>
+                            </div>
+                             <div class="form-field">
+                                <label>DUNS number</label>
+                                <h:inputText />
+                            </div>
+                        </div>
+
+                        <div class="card-header" style="margin-top: 20px;">
+                            <span>Other Information</span>
+                        </div>
+                        <div class="form-grid">
+                            <div class="form-field">
+                                <label>Organization number</label>
+                                <h:inputText />
+                            </div>
+                            <div class="form-field">
+                                <label>Address books</label>
+                                <h:inputText />
+                            </div>
+                        </div>
+
+                        <div class="card-header" style="margin-top: 20px;">
+                            <span>Vendor Collaboration</span>
+                        </div>
+                        <div class="form-grid">
+                            <div class="form-field">
+                                <label>Collaboration activation</label>
+                                <h:inputText value="Not Active" />
+                            </div>
+                            <div class="form-field">
+                                <label>Known as</label>
+                                <h:inputText />
+                            </div>
+                            <div class="form-field">
+                                <label>Phonetic name</label>
+                                <h:inputText />
+                            </div>
+                            <div class="form-field">
+                                <label>Language</label>
+                                <h:inputText value="en-us" />
+                            </div>
+                        </div>
+
+                        <!-- Add more sections (Addresses, Contact information, Miscellaneous details, Vendor profile, Purchasing demographics) here -->
+                        <div class="card-header" style="margin-top: 20px;">
+                            <span>Addresses</span>
+                        </div>
+                         <div class="card-header" style="margin-top: 20px;">
+                            <span>Contact information</span>
+                        </div>
+                         <div class="card-header" style="margin-top: 20px;">
+                            <span>Miscellaneous details</span>
+                        </div>
+                         <div class="card-header" style="margin-top: 20px;">
+                            <span>Vendor profile</span>
+                        </div>
+                         <div class="card-header" style="margin-top: 20px;">
+                            <span>Purchasing demographics</span>
+                        </div>
+
+                    </h:form>
+                </p:panel>
+            </div>
+</h:body>
+</html>
+
+
